@@ -1,22 +1,65 @@
+//manager questions
 function generateMarkdown(answers) {
   return `
   ## Name
-  ${answers.Name}
-
-  ## Role
-  ${answers.Role}
-  
+  ${answers.ManagerName}
+ 
   ## ID Number
   ${answers.IDNumber}
 
   ## Email
   ${answers.Email}
 
-  ## Github
-  https://github.com/${answers.Questions}
+  ## Office Number
+  ${answers.OfficeNumber}
   
   `;
 }
 
+// engineer markdown with github
 
-module.exports = {generateMarkdown};
+function generateMarkdownEngineer(answers) {
+  return `
+## Role
+${answers.Menu}
+
+## Name
+  ${answers.Name}
+ 
+## ID Number
+  ${answers.IDNumber}
+
+## Email
+  ${answers.Email}
+
+## Github
+https://github.com/${answers.Questions}
+
+`;
+}
+
+
+// intern markdown with school 
+function generateMarkdownIntern(answers) {
+  return `
+
+## Role
+${answers.Menu}
+
+## Name
+  ${answers.Name}
+ 
+## ID Number
+  ${answers.IDNumber}
+
+## Email
+  ${answers.Email}
+
+## School
+${answers.School}
+
+`;
+}
+
+
+module.exports = { generateMarkdown };
